@@ -58,6 +58,14 @@ function Navbar() {
       return [{ to: "/checkout", label: "Checkout" }];
     }
 
+    if (location.pathname === "/about") {
+      return [{ to: "/about", label: "About Us" }];
+    }
+
+    if (location.pathname === "/contact") {
+      return [{ to: "/contact", label: "Contact" }];
+    }
+
     if (location.pathname.startsWith("/product/")) {
       return [
         { to: "/products", label: "Products" },
@@ -127,10 +135,10 @@ function Navbar() {
               <a href="#blog">Blog</a>
             </li>
             <li>
-              <a href="#about">About Us</a>
+              <NavLink to="/about">About Us</NavLink>
             </li>
             <li>
-              <a href="#contact">Contact Us</a>
+              <NavLink to="/contact">Contact Us</NavLink>
             </li>
           </ul>
           <ul
@@ -147,10 +155,10 @@ function Navbar() {
               <a href="#blog">Blog</a>
             </li>
             <li>
-              <a href="#about">About Us</a>
+              <NavLink to="/about">About Us</NavLink>
             </li>
             <li>
-              <a href="#contact">Contact Us</a>
+              <NavLink to="/contact">Contact Us</NavLink>
             </li>
             <div id="call-mob" className="call-now">
               <i className="ri-phone-line"></i>

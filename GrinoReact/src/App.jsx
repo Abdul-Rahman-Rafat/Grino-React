@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import ShoppingCartPage from "./pages/ShoppingCartPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ContactPage from "./pages/ContactPage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductInfoPage from "./pages/ProductInfoPage";
 import "./App.css";
@@ -22,6 +24,8 @@ function App() {
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/cart" element={<ShoppingCartPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/about" element={<AboutUsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Route>
     </Routes>
   );
