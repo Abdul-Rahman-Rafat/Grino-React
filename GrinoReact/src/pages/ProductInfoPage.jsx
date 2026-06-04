@@ -52,7 +52,19 @@ function ProductInfoPage() {
   const [activeTab, setActiveTab] = useState("description");
   const [selectedImage, setSelectedImage] = useState("");
   const [quantity, setQuantity] = useState(1);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const product = useMemo(
     () => state.products.find((productItem) => productItem.id === Number(id)),
     [state.products, id],
@@ -234,7 +246,11 @@ function ProductInfoPage() {
               </button>
             </div>
             <button className="shop-now" onClick={handleAddToCart}>
-              Add to Cart <i class="ri-shopping-bag-line"></i>
+              {isMobile ? (
+                <i className="ri-shopping-bag-line"></i>
+              ) : (
+                "Add to Cart"
+              )}
             </button>
             <button
               type="button"

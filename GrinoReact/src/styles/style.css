@@ -230,8 +230,12 @@
 .search-result {
   display: flex;
   align-items: center;
+  border-radius: 8px;
+  padding: var(--Padding-6);
+  background-color: var(--White);
+  box-shadow: var(--Gray-1) 0 0 10px 0;
   gap: 20px;
-  border-bottom: 1px var(--Gray-1) solid;
+  border: 1px var(--Gray-1) solid;
   cursor: pointer;
 }
 .search-result img {
@@ -778,6 +782,7 @@
 
 .quantity-trash {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
   padding: var(--Padding-6);

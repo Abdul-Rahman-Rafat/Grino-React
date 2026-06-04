@@ -60,6 +60,7 @@ function SearchBar() {
             >
               <img src={product.thumbnail} alt={product.title} />
               <span>{product.title}</span>
+              <span className="result-price">{`$${product.price.toFixed(2)}`}</span>
             </button>
           ))}
         </div>

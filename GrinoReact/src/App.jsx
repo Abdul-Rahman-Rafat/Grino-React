@@ -4,6 +4,7 @@ import MainLayout from "./layouts/MainLayout";
 import FavoritesPage from "./pages/FavoritesPage";
 import HomePage from "./pages/HomePage";
 import PlaceholderPage from "./pages/PlaceholderPage";
+import ShoppingCartPage from "./pages/ShoppingCartPage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductInfoPage from "./pages/ProductInfoPage";
 import "./App.css";
@@ -18,10 +19,7 @@ function App() {
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/product/:id" element={<ProductInfoPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
-        <Route
-          path="/cart"
-          element={<PlaceholderPage title="Shopping Cart Page" />}
-        />
+        <Route path="/cart" element={<ShoppingCartPage />} />
         <Route
           path="/checkout"
           element={<PlaceholderPage title="Checkout Page" />}

@@ -159,7 +159,7 @@
 }
 
 .price-new {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: var(--Hard-Primary);
   font-weight: 800;
 }
@@ -225,7 +225,7 @@
 .actions-row .shop-now {
   background: var(--Primary);
   color: var(--White);
-  padding: 15px var(--Padding-3);
+  padding: 15px var(--Padding-4);
   border-radius: 999px;
   font-weight: 700;
   border: none;
@@ -233,7 +233,9 @@
   cursor: pointer;
 }
 .actions-row .shop-now:hover {
-  background: var(--Hard-Primary);
+  background: var(--White);
+  color: var(--Primary);
+  border: 1px solid var(--Primary);
 }
 
 .actions-row .fav-toggle {
