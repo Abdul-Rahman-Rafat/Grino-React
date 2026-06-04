@@ -1,0 +1,9 @@
+@import "./styles/style.css";
+@import "./styles/products.css";
+@import "./styles/favorites.css";
+
+.nav-page-part {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
