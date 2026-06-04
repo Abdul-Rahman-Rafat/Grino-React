@@ -1,0 +1,249 @@
+.bailling-information-section {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.bailling-information-container {
+  flex: 2;
+  border: 1px var(--Gray-1) solid;
+  border-radius: 8px;
+  padding: var(--Padding-5) var(--Padding-5) var(--Padding-4);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: var(--Gray-2) 0 0 10px 0;
+}
+
+.form-billing {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.form-billing .label-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-billing .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.form-billing label {
+  font-size: 18px;
+  color: var(--Gray-9);
+}
+
+.optional {
+  color: var(--Gray-4);
+}
+
+.form-billing input {
+  border: 1px var(--Gray-1) solid;
+  padding: var(--Padding-6);
+  font-size: var(--Heading-4);
+  border-radius: 8px;
+  box-shadow: var(--Gray-1) 0 0 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-billing input:focus {
+  outline: none;
+  scale: 1.03;
+  box-shadow: var(--Gray-2) 0 5px 5px 5px;
+}
+
+.address-container {
+  width: 90%;
+}
+
+#streetAddress {
+  width: 90%;
+}
+
+.form-billing select {
+  border: 1px var(--Gray-1) solid;
+  border-radius: 8px;
+  padding: var(--Padding-6) var(--Padding-3) var(--Padding-6) var(--Padding-6);
+  color: var(--Gray-5);
+}
+
+.form-billing select:focus {
+  outline: none;
+}
+
+.email-phone {
+  width: 38%;
+}
+
+.order-total-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px var(--Gray-1) solid;
+  border-radius: 8px;
+  padding: var(--Padding-5);
+  overflow-y: auto;
+  box-shadow: var(--Gray-2) 0 0 10px 0;
+}
+
+.order-total-container .sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-total-container div p {
+  color: var(--Gray-4);
+}
+
+.order-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-total-container .order-item-name,
+.order-price,
+.order-times {
+  color: var(--Gray-9);
+}
+
+.order-info img {
+  width: 70px;
+}
+
+.order-proceed-btn {
+  background-color: var(--Primary);
+  color: var(--White);
+  border: none;
+  border-radius: 16px;
+  padding: var(--Padding-6) 0;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.order-proceed-btn:hover {
+  background-color: var(--White);
+  color: var(--Primary);
+}
+
+.success_order {
+  position: fixed;
+  top: 40%;
+  right: 35%;
+  width: 0rem;
+  height: 0vh;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../styles/images/leaves.webp);
+  border: 1px var(--White) solid;
+  border-radius: 8px;
+  padding: var(--Padding-5);
+  transition: all 0.3s ease-in-out;
+  z-index: 902;
+  box-shadow: var(--Gray-1) 0 0 10px 0;
+}
+
+.success_order .order-confirmedName-msg {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.success_order .order-confirmedName {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.success_order p {
+  color: var(--White);
+  font-size: var(--Heading-2);
+}
+
+.success_order .ri-checkbox-circle-line {
+  color: var(--Primary);
+  font-size: var(--Heading-1);
+}
+
+.success_order .ri-error-warning-fill {
+  color: var(--Danger);
+  font-size: var(--Heading-1);
+}
+
+.success_order.showMsg {
+  width: 40rem;
+  height: 30vh;
+  opacity: 100;
+}
+
+.checkMsgX {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: var(--Heading-2);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  color: var(--White);
+}
+
+.checkMsgX:hover {
+  color: var(--Danger);
+}
+
+.no-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--Heading-1);
+}
+
+.not-found-img {
+  width: 200px;
+}
+
+.return-btn {
+  color: var(--Gray-9);
+  background-color: var(--Gray-1);
+  padding: var(--Padding-6) var(--Padding-4);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.return-btn:hover {
+  color: var(--White);
+  background-color: var(--Primary);
+}
+
+@media (max-width: 720px) {
+  .email-phone {
+    width: auto;
+  }
+  .order-info img {
+    width: 50px;
+  }
+  .bailling-information-section {
+    width: 95%;
+  }
+  .address-container {
+    width: 100%;
+  }
+  #streetAddress {
+    width: 100%;
+  }
+}

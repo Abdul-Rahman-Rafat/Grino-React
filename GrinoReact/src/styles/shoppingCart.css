@@ -1,0 +1,233 @@
+.shopping-cart-section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.shopping-cart-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 50px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--Gray-4);
+}
+
+.shopping-items-cart-container {
+  border: 1px var(--Gray-1) solid;
+  border-radius: 8px;
+  padding: var(--Padding-5);
+  flex: 2;
+
+  box-shadow: var(--Gray-2) 0 0 10px 0;
+}
+.shopping-items-cart-container.hide_container {
+  display: none;
+}
+
+.item-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 50px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+.item-img-name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.item-img-name img {
+  width: 70px;
+}
+
+.no-items {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  align-items: center;
+  justify-content: center;
+  font-size: var(--Heading-1);
+}
+.not-found-img {
+  width: 200px;
+}
+
+.quantity-cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-quantity-cart {
+  font-size: var(--Heading-2);
+
+  cursor: pointer;
+  padding: var(--Padding-6) var(--Padding-6);
+  width: 42px;
+  border-radius: 50%;
+  background: var(--Gray-1);
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-quantity-cart:hover {
+  background: var(--Primary);
+  color: var(--White);
+}
+
+.ri-close-circle-line {
+  font-size: var(--Heading-2);
+  cursor: pointer;
+}
+.ri-close-circle-line:hover {
+  color: red;
+}
+
+.return-update-btn {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.return-update-btn .return-btn {
+  color: var(--Gray-9);
+  background-color: var(--Gray-1);
+  padding: var(--Padding-6) var(--Padding-4);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.return-update-btn .return-btn:hover {
+  color: var(--White);
+  background-color: var(--Primary);
+}
+
+.coupon-container {
+  width: 52%;
+  margin-right: 29%;
+  margin-left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px var(--Gray-1) solid;
+  align-items: center;
+  gap: 10px;
+  padding: var(--Padding-6) var(--Padding-4);
+  border-radius: 8px;
+  box-shadow: var(--Gray-2) 0 0 10px 0;
+}
+
+.coupon-container input {
+  border: 1px var(--Gray-1) solid;
+  padding: var(--Padding-6);
+  font-size: var(--Heading-4);
+  border-radius: 16px;
+}
+.coupon-container input:focus {
+  outline: none;
+}
+.input-apply {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.input-apply input {
+  flex: 2;
+}
+.coupon-container button {
+  color: var(--White);
+  background-color: var(--Gray-8);
+  cursor: pointer;
+  padding: var(--Padding-6) var(--Padding-4);
+  border-radius: 26px;
+  transition: all 0.3s ease-in-out;
+}
+.coupon-container button:hover {
+  background: var(--Gray-7);
+  color: var(--White);
+}
+
+.cart-total-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px var(--Gray-1) solid;
+  border-radius: 8px;
+  padding: var(--Padding-5);
+
+  box-shadow: var(--Gray-2) 0 0 10px 0;
+}
+.cart-total-container div {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-total-container div p {
+  color: var(--Gray-4);
+}
+
+.checkout-proceed-btn {
+  width: 100%;
+  background-color: var(--Primary);
+  color: var(--White);
+  border: none;
+  border-radius: 16px;
+  padding: var(--Padding-6) var(--Padding-4);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.checkout-proceed-btn:hover {
+  background-color: var(--White);
+  color: var(--Primary);
+}
+
+@media (max-width: 780px) {
+  .header {
+    display: none;
+  }
+  .shopping-cart-container {
+    width: 95%;
+  }
+  .item-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 12px;
+    align-items: center;
+    position: relative;
+  }
+  .ri-close-circle-line {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .coupon-container {
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+  }
+  .input-apply {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .coupon-container input {
+    width: 100%;
+  }
+}
