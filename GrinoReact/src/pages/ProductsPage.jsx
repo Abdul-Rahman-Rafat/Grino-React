@@ -20,7 +20,11 @@ const categoryGroups = [
   ],
   [
     ["seafood", "seafood-btn", "Seafood"],
-    ["household essentials", "household-essentials-btn", "Household Essentials"],
+    [
+      "household essentials",
+      "household-essentials-btn",
+      "Household Essentials",
+    ],
   ],
   [
     ["pet supplies", "pet-food-btn", "Pet Supplies"],
@@ -54,8 +58,10 @@ function ProductsPage() {
         state.selectedCategory === "all" || category === state.selectedCategory;
       const matchesPrice =
         price >= state.priceRange.min && price <= state.priceRange.max;
+      // round the product.rating to the nearest integer for comparison
       const matchesRating =
-        state.selectedRating === 0 || product.rating >= state.selectedRating;
+        state.selectedRating === 0 ||
+        Math.round(product.rating) >= state.selectedRating;
 
       return matchesCategory && matchesPrice && matchesRating;
     });
@@ -153,11 +159,13 @@ function ProductsPage() {
             <div className="filter-all-categories">
               <h2>All Categories</h2>
               <div className="categories-btns">
-                {categoryGroups.map((group) => (
+                {categoryGroups.map((group) =>
                   group.length === 1 ? (
                     <button
                       className={`${group[0][1]} ${
-                        state.selectedCategory === group[0][0] ? "active_category" : ""
+                        state.selectedCategory === group[0][0]
+                          ? "active_category"
+                          : ""
                       }`}
                       data-category={group[0][0]}
                       key={group[0][0]}
@@ -170,7 +178,9 @@ function ProductsPage() {
                       {group.map(([category, className, label]) => (
                         <button
                           className={`${className} ${
-                            state.selectedCategory === category ? "active_category" : ""
+                            state.selectedCategory === category
+                              ? "active_category"
+                              : ""
                           }`}
                           data-category={category}
                           key={category}
@@ -180,8 +190,8 @@ function ProductsPage() {
                         </button>
                       ))}
                     </div>
-                  )
-                ))}
+                  ),
+                )}
               </div>
             </div>
 

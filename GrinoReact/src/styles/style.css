@@ -145,10 +145,12 @@
   display: flex;
   align-items: center;
   gap: 7px;
+  color: var(--Gray-9);
   font-size: var(--Heading-2);
   cursor: pointer;
   position: relative;
   transition: all 3s ease-in-out;
+  text-decoration: none;
 }
 .Logo .fa-seedling {
   color: var(--Primary);
@@ -698,7 +700,10 @@
   color: var(--Gray-9);
 }
 .product-card .product-info {
-  line-height: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 1.45;
   color: var(--Gray-9);
 }
 
@@ -707,9 +712,14 @@
 }
 .product-info h4 {
   color: var(--Gray-9);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
 }
 .product-info h4 .old-price {
   color: var(--Gray-4);
+  font-size: 0.95rem;
 }
 
 .product-info .ri-star-s-fill {
@@ -724,6 +734,7 @@
   box-shadow: var(--Gray-1) 0 0 10px 0;
   width: 50px;
   height: 50px;
+  min-width: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -767,9 +778,8 @@
 
 .quantity-trash {
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
-  /* gap: 20px; */
+  gap: 10px;
   padding: var(--Padding-6);
   border: 1px var(--Gray-1) solid;
   border-radius: 32px;

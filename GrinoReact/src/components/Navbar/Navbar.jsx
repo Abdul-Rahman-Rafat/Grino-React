@@ -1,7 +1,11 @@
 import { memo, useCallback, useMemo, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useStore } from "../../context/store";
-import { formatPrice, getCartItemsCount, getCartTotal } from "../../utils/priceUtils";
+import {
+  formatPrice,
+  getCartItemsCount,
+  getCartTotal,
+} from "../../utils/priceUtils";
 import CartPopup from "../CartPopup/CartPopup";
 import SearchBar from "./SearchBar";
 
@@ -113,18 +117,41 @@ function Navbar() {
 
         <div className="nav-links">
           <ul className="links-list">
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/products">Shop</NavLink></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/products">Shop</NavLink>
+            </li>
+            <li>
+              <a href="#blog">Blog</a>
+            </li>
+            <li>
+              <a href="#about">About Us</a>
+            </li>
+            <li>
+              <a href="#contact">Contact Us</a>
+            </li>
           </ul>
-          <ul id="ul-mob" className={`links-list ${isMenuOpen ? "active" : ""}`}>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/products">Shop</NavLink></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+          <ul
+            id="ul-mob"
+            className={`links-list ${isMenuOpen ? "active" : ""}`}
+          >
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/products">Shop</NavLink>
+            </li>
+            <li>
+              <a href="#blog">Blog</a>
+            </li>
+            <li>
+              <a href="#about">About Us</a>
+            </li>
+            <li>
+              <a href="#contact">Contact Us</a>
+            </li>
             <div id="call-mob" className="call-now">
               <i className="ri-phone-line"></i>
               <div>
@@ -138,7 +165,9 @@ function Navbar() {
               <div className="shopping" onClick={handleToggleCart}>
                 <div className="cart">
                   <i className="ri-shopping-cart-line"></i>
-                  <span className="items-count items-count-mob">{itemsCount}</span>
+                  <span className="items-count items-count-mob">
+                    {itemsCount}
+                  </span>
                 </div>
                 <div className="info">
                   <p className="shopping-txt">Shopping Cart:</p>
@@ -149,7 +178,11 @@ function Navbar() {
               </div>
             </div>
           </ul>
-          <i id="burger-menu" className="fa-solid fa-bars" onClick={handleToggleMenu}></i>
+          <i
+            id="burger-menu"
+            className="fa-solid fa-bars"
+            onClick={handleToggleMenu}
+          ></i>
           <div className="call-now">
             <i className="ri-phone-line"></i>
             <div>

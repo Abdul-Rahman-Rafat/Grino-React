@@ -16,7 +16,7 @@ function FavoritesPage() {
 
   const handleAddToCart = useCallback(
     (product) => {
-      dispatch({ type: "ADD_TO_CART", payload: product });
+      dispatch({ type: "ADD_TO_CART", payload: { product, quantity: 1 } });
       showToast("cart");
     },
     [dispatch, showToast],
@@ -28,7 +28,9 @@ function FavoritesPage() {
       <h1 className="heading">My Wishlist</h1>
       <div className="favorites-container">
         <div className="favorites-header">
-          <div className={`header ${state.favorites.length === 0 ? "hide_head" : ""}`}>
+          <div
+            className={`header ${state.favorites.length === 0 ? "hide_head" : ""}`}
+          >
             <h3>PRODUCT</h3>
             <h3>PRICE</h3>
             <h3>STOCK STATUS</h3>
@@ -50,7 +52,11 @@ function FavoritesPage() {
               const newPrice = getDiscountedPrice(product);
 
               return (
-                <div className="favorite-item" data-id={product.id} key={product.id}>
+                <div
+                  className="favorite-item"
+                  data-id={product.id}
+                  key={product.id}
+                >
                   <div className="item-img-name">
                     <i
                       className="ri-close-circle-line"

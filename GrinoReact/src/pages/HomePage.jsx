@@ -15,27 +15,75 @@ const categories = [
   ["condiments", "images/condiments.webp", "Condiments"],
   ["cooking essentials", "images/Cooking.webp", "Cooking"],
   ["pet supplies", "images/pet-food.webp", "Pet Food"],
-  ["household essentials", "images/Dish Detergents.webp", "Household Essentials"],
+  [
+    "household essentials",
+    "images/Dish Detergents.webp",
+    "Household Essentials",
+  ],
   ["seafood", "images/seafood.webp", "Seafood"],
 ];
 
 const features = [
   ["ri-truck-line", "Free Shipping", "Free shipping on all your order"],
-  ["ri-customer-service-2-line", "Customer Support 24/7", "Instant access to Support"],
-  ["fa-regular fa-credit-card", "100% Secure Payment", "We ensure your money is save"],
+  [
+    "ri-customer-service-2-line",
+    "Customer Support 24/7",
+    "Instant access to Support",
+  ],
+  [
+    "fa-regular fa-credit-card",
+    "100% Secure Payment",
+    "We ensure your money is save",
+  ],
   ["ri-refresh-line", "Money-Back Guarantee", "30 Days Money-Back Guarantee"],
 ];
 
 const newsCards = [
-  ["images/orange-slices.webp", "orange-slices", "4", "MAR", "85 Comments", "Experience the refreshing taste of fresh citrusto energize your day naturally."],
-  ["images/cooked-egg.webp", "cooked-egg", "18", "JAN", "49 Comments", "combination of avocado and eggs, creating the perfect balanced breakfast"],
-  ["images/salad.webp", "salad", "11", "SEP", "65 Comments", "A colorful mix of fresh vegetables crafted into a nourishing salad bowl"],
+  [
+    "images/orange-slices.webp",
+    "orange-slices",
+    "4",
+    "MAR",
+    "85 Comments",
+    "Experience the refreshing taste of fresh citrusto energize your day naturally.",
+  ],
+  [
+    "images/cooked-egg.webp",
+    "cooked-egg",
+    "18",
+    "JAN",
+    "49 Comments",
+    "combination of avocado and eggs, creating the perfect balanced breakfast",
+  ],
+  [
+    "images/salad.webp",
+    "salad",
+    "11",
+    "SEP",
+    "65 Comments",
+    "A colorful mix of fresh vegetables crafted into a nourishing salad bowl",
+  ],
 ];
 
 const testimonials = [
-  ["images/customer1.webp", "Robert Fox", "Customer", "The service exceeded my expectations. Everything was delivered on time and with outstanding quality. I'll definitely be coming back again."],
-  ["https://i.ibb.co/Lz51QhCV/me.jpg", "AbdulRahman", "Owner", "The shopping experience was incredibly smooth and convenient. The product quality exceeded my expectations, and delivery was fast and reliable.."],
-  ["images/customer3.webp", "Eleanor Pena", "Customer", "Great results and excellent support. I felt valued as a customer, and the final outcome was exactly what I was looking for."],
+  [
+    "images/customer1.webp",
+    "Robert Fox",
+    "Customer",
+    "The service exceeded my expectations. Everything was delivered on time and with outstanding quality. I'll definitely be coming back again.",
+  ],
+  [
+    "https://i.ibb.co/Lz51QhCV/me.jpg",
+    "AbdulRahman",
+    "Owner",
+    "The shopping experience was incredibly smooth and convenient. The product quality exceeded my expectations, and delivery was fast and reliable..",
+  ],
+  [
+    "images/customer3.webp",
+    "Eleanor Pena",
+    "Customer",
+    "Great results and excellent support. I felt valued as a customer, and the final outcome was exactly what I was looking for.",
+  ],
 ];
 
 function TimeBlock({ value, label, id }) {
@@ -87,10 +135,12 @@ function HomePage() {
         <div className="big-banner">
           <div className="title">
             <h1>Fresh & Healthy</h1>
-            <h1>Organic Food</h1>
+            <h1 className="">Organic Food</h1>
           </div>
           <div className="discount">
-            <p>Sale up to <span className="discount-percent">30% OFF</span></p>
+            <p>
+              Sale up to <span className="discount-percent">30% OFF</span>
+            </p>
             <p className="free-ship">Free shipping on all your order.</p>
           </div>
           <div>
@@ -123,7 +173,9 @@ function HomePage() {
       <section className="features-container">
         {features.map(([icon, title, text]) => (
           <div className="feature-container" key={title}>
-            <div className="feature-img"><i className={icon}></i></div>
+            <div className="feature-img">
+              <i className={icon}></i>
+            </div>
             <div className="feature-txt">
               <h3>{title}</h3>
               <p>{text}</p>
@@ -185,7 +237,9 @@ function HomePage() {
         <div className="mid-banner">
           <p>85% Fat Free</p>
           <h3>Low-Fat Meat</h3>
-          <div className="start-offer">Started at <span className="start-value">$79.99</span></div>
+          <div className="start-offer">
+            Started at <span className="start-value">$79.99</span>
+          </div>
           <div>
             <button className="shop-now" onClick={handleShopNow}>
               Shop Now &nbsp; <i className="fas fa-arrow-right-long"></i>
@@ -195,7 +249,9 @@ function HomePage() {
         <div className="right-banner">
           <p>Winter Sale</p>
           <h3>100% Fresh Fruit</h3>
-          <div className="up-to-offer">Up to <span className="up-to-value">64% OFF</span></div>
+          <div className="up-to-offer">
+            Up to <span className="up-to-value">64% OFF</span>
+          </div>
           <div>
             <button className="shop-now" onClick={handleShopNow}>
               Shop Now &nbsp; <i className="fas fa-arrow-right-long"></i>
@@ -210,22 +266,34 @@ function HomePage() {
         <img className="leaf leaf-3" src="images/leaf.webp" alt="leaf3" />
         <img className="leaf leaf-4" src="images/long-leaf.webp" alt="leaf4" />
         <div className="old-man-banner">
-          <img className="old-man" src="images/man-hold-apple-pack.webp" alt="man-hold-apple-pack" />
+          <img
+            className="old-man"
+            src="images/man-hold-apple-pack.webp"
+            alt="man-hold-apple-pack"
+          />
         </div>
         <div className="young-man-banner">
-          <img className="young-man" src="images/man-pick-apple.webp" alt="man-pick-apple" />
+          <img
+            className="young-man"
+            src="images/man-pick-apple.webp"
+            alt="man-pick-apple"
+          />
         </div>
         <div className="trust-container">
-          <h2 className="trust-title">100% Trusted <br /> Organic Food Store</h2>
+          <h2 className="trust-title">
+            100% Trusted <br /> Organic Food Store
+          </h2>
           <div className="trust-p">
             <div className="trust-p-title">
               <i className="ri-checkbox-circle-fill"></i>
               <h4>Healthy & natural food for lovers of healthy food.</h4>
             </div>
             <p>
-              We believe that real health starts with real food. That's why <br />
+              We believe that real health starts with real food. That's why{" "}
+              <br />
               Every product we offer is carefully selected to ensure it's <br />
-              Free from harmful chemicals, preservatives, and artificial additives <br />
+              Free from harmful chemicals, preservatives, and artificial
+              additives <br />
               Giving you the clean, natural nutrition your body deserves.
             </p>
           </div>
@@ -249,7 +317,12 @@ function HomePage() {
 
       <section className="records">
         <img className="record-branch" src="images/branch.webp" alt="branch" />
-        {["37+|Years of Hard Work", "500k+|Happy Customer", "28|Qualified Team Member", "750k+|Monthly Orders"].map((record) => {
+        {[
+          "37+|Years of Hard Work",
+          "500k+|Happy Customer",
+          "28|Qualified Team Member",
+          "750k+|Monthly Orders",
+        ].map((record) => {
           const [value, text] = record.split("|");
           return (
             <div className="record-card" key={text}>
@@ -261,25 +334,52 @@ function HomePage() {
       </section>
 
       <section id="blog" className="latest-cover">
-        <img className="latest-cover-leaf1 leaf" src="images/leaf.webp" alt="leaf3" />
-        <img className="latest-cover-leaf2 leaf" src="images/leaf.webp" alt="leaf3" />
-        <img className="latest-cover-leaf3 leaf" src="images/leaf.webp" alt="leaf3" />
+        <img
+          className="latest-cover-leaf1 leaf"
+          src="images/leaf.webp"
+          alt="leaf3"
+        />
+        <img
+          className="latest-cover-leaf2 leaf"
+          src="images/leaf.webp"
+          alt="leaf3"
+        />
+        <img
+          className="latest-cover-leaf3 leaf"
+          src="images/leaf.webp"
+          alt="leaf3"
+        />
         <div className="latest-news">
-          <h3 className="blog-title" id="blog-title">Blog</h3>
+          <h3 className="blog-title" id="blog-title">
+            Blog
+          </h3>
           <h1 className="latest-news-title">Latest News</h1>
           <div className="latest-news-cards-container">
             {newsCards.map(([image, alt, day, month, comments, content]) => (
               <div className="latest-news-card" key={image}>
                 <div className="latest-news-card-image-container">
-                  <img className="latest-news-card-image" src={image} alt={alt} />
-                  <div className="news-date"><h1>{day}</h1><p>{month}</p></div>
+                  <img
+                    className="latest-news-card-image"
+                    src={image}
+                    alt={alt}
+                  />
+                  <div className="news-date">
+                    <h1>{day}</h1>
+                    <p>{month}</p>
+                  </div>
                 </div>
                 <div className="latest-news-card-info">
                   <div className="latest-news-card-info-desc">
                     <div className="latest-news-card-info-title">
-                      <span className="latest-news-card-info-desc-category"><i className="ri-price-tag-3-line"></i> Food</span>
-                      <span className="latest-news-card-info-desc-user"><i className="ri-user-line"></i> By Admin</span>
-                      <span className="latest-news-card-info-desc-comments"><i className="ri-chat-2-line"></i> {comments}</span>
+                      <span className="latest-news-card-info-desc-category">
+                        <i className="ri-price-tag-3-line"></i> Food
+                      </span>
+                      <span className="latest-news-card-info-desc-user">
+                        <i className="ri-user-line"></i> By Admin
+                      </span>
+                      <span className="latest-news-card-info-desc-comments">
+                        <i className="ri-chat-2-line"></i> {comments}
+                      </span>
                     </div>
                     <p className="latest-news-card-info-content">{content}</p>
                   </div>
@@ -299,8 +399,12 @@ function HomePage() {
           <div className="cust-nav">
             <h1>What Our Customer Says</h1>
             <div className="testimonial-arrows">
-              <button className="back-arrow arrow"><i className="fas fa-arrow-left-long"></i></button>
-              <button className="next-arrow arrow"><i className="fas fa-arrow-right-long"></i></button>
+              <button className="back-arrow arrow">
+                <i className="fas fa-arrow-left-long"></i>
+              </button>
+              <button className="next-arrow arrow">
+                <i className="fas fa-arrow-right-long"></i>
+              </button>
             </div>
           </div>
           <div className="customer-card-container">
@@ -312,7 +416,10 @@ function HomePage() {
                   <div className="customer-info">
                     <div className="customer-name-img">
                       <img src={image} alt="" />
-                      <div className="name-title"><h3>{name}</h3><h5>{title}</h5></div>
+                      <div className="name-title">
+                        <h3>{name}</h3>
+                        <h5>{title}</h5>
+                      </div>
                     </div>
                     <div className="rating">
                       {Array.from({ length: 5 }, (_, index) => (
@@ -332,18 +439,28 @@ function HomePage() {
           <div className="contact-information-card-container">
             <div className="contact-information-card1 card">
               <i className="ri-map-pin-line"></i>
-              <div className="contact-txt"><h3>Our Location</h3><p>11.New ST. Shobra, Cairo , Egypt</p></div>
+              <div className="contact-txt">
+                <h3>Our Location</h3>
+                <p>11.New ST. Shobra, Cairo , Egypt</p>
+              </div>
             </div>
             <div className="contact-information-card2 card">
               <i className="ri-phone-line"></i>
-              <div className="contact-txt"><h3>Call Us 24/7</h3><h2>(+20) 111-3545-007</h2></div>
+              <div className="contact-txt">
+                <h3>Call Us 24/7</h3>
+                <h2>(+20) 111-3545-007</h2>
+              </div>
             </div>
             <div className="contact-information-card3 card">
               <i className="ri-mail-line"></i>
               <div className="contact-txt">
                 <h3>SUBSCRIBE NEWSLTTER</h3>
                 <div className="email-address-container">
-                  <input className="email-field" type="text" placeholder="Your email address" />
+                  <input
+                    className="email-field"
+                    type="text"
+                    placeholder="Your email address"
+                  />
                   <button className="subscribe-btn">Subscribe</button>
                 </div>
               </div>
@@ -353,12 +470,28 @@ function HomePage() {
       </section>
 
       <section className="success_pop_section">
-        <div><i className="fa-regular fa-circle-check"></i><p>Added To Favorites Successfully</p></div>
-        <div className="link-fav"><a onClick={() => navigate("/favorites")}>Visit Your Wishlist &nbsp; <i className="fas fa-arrow-right-long"></i></a></div>
+        <div>
+          <i className="fa-regular fa-circle-check"></i>
+          <p>Added To Favorites Successfully</p>
+        </div>
+        <div className="link-fav">
+          <a onClick={() => navigate("/favorites")}>
+            Visit Your Wishlist &nbsp;{" "}
+            <i className="fas fa-arrow-right-long"></i>
+          </a>
+        </div>
       </section>
       <section className="success_pop_section2">
-        <div><i className="fa-regular fa-circle-check"></i><p>Added To Cart Successfully</p></div>
-        <div className="link-fav"><a onClick={() => navigate("/cart")}>Visit Shopping Cart &nbsp; <i className="fas fa-arrow-right-long"></i></a></div>
+        <div>
+          <i className="fa-regular fa-circle-check"></i>
+          <p>Added To Cart Successfully</p>
+        </div>
+        <div className="link-fav">
+          <a onClick={() => navigate("/cart")}>
+            Visit Shopping Cart &nbsp;{" "}
+            <i className="fas fa-arrow-right-long"></i>
+          </a>
+        </div>
       </section>
 
       <div className="up-home-arrow" onClick={handleTop}>

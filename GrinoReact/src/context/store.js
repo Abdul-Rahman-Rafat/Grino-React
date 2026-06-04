@@ -22,20 +22,23 @@ export function storeReducer(state, action) {
     case "FETCH_PRODUCTS_ERROR":
       return { ...state, loading: false, error: action.payload };
     case "ADD_TO_CART": {
-      const exists = state.cart.find((item) => item.id === action.payload.id);
+      const { product, quantity = 1 } = action.payload;
+      const productData = product ?? action.payload;
+      const finalQuantity = product ? quantity : 1;
+      const exists = state.cart.find((item) => item.id === productData.id);
       if (exists) {
         return {
           ...state,
           cart: state.cart.map((item) =>
-            item.id === action.payload.id
-              ? { ...item, quantity: item.quantity + 1 }
+            item.id === productData.id
+              ? { ...item, quantity: item.quantity + finalQuantity }
               : item,
           ),
         };
       }
       return {
         ...state,
-        cart: [...state.cart, { ...action.payload, quantity: 1 }],
+        cart: [...state.cart, { ...productData, quantity: finalQuantity }],
       };
     }
     case "INCREMENT_QUANTITY":
@@ -64,7 +67,9 @@ export function storeReducer(state, action) {
         cart: state.cart.filter((item) => item.id !== action.payload),
       };
     case "TOGGLE_FAVORITE": {
-      const exists = state.favorites.some((fav) => fav.id === action.payload.id);
+      const exists = state.favorites.some(
+        (fav) => fav.id === action.payload.id,
+      );
       return {
         ...state,
         favorites: exists

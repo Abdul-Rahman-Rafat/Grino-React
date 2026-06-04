@@ -24,7 +24,7 @@ function ProductCard({ product }) {
   }, [dispatch, isFavorite, product, showToast]);
 
   const handleAddToCart = useCallback(() => {
-    dispatch({ type: "ADD_TO_CART", payload: product });
+    dispatch({ type: "ADD_TO_CART", payload: { product, quantity: 1 } });
     showToast("cart");
   }, [dispatch, product, showToast]);
 
@@ -88,7 +88,10 @@ function ProductCard({ product }) {
         </div>
         <div className={`add-minus-trash ${isInCart ? "show_options" : ""}`}>
           <div className="quantity-trash">
-            <i className="ri-add-line btn-quantityCard" onClick={handleIncrement}></i>
+            <i
+              className="ri-add-line btn-quantityCard"
+              onClick={handleIncrement}
+            ></i>
             <span className="item_quan_count">{cartItem?.quantity ?? 0}</span>
             <i
               className="ri-subtract-line btn-quantityCard"
