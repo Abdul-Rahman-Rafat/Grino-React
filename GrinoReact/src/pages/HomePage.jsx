@@ -43,6 +43,7 @@ const bannerSlides = [
   {
     image: "images/caro1img.png",
   },
+
   {
     image: "images/caro2img.png",
   },
@@ -145,27 +146,28 @@ function HomePage() {
             >
               <div className="banner-slide-content">
                 <img src={slide.image} alt={`Slide ${index + 1}`} />
-
-                <div className="banner-slide-copy">
-                  <p className="welcomeP">WELCOME TO SHOPERY</p>
-                  <h1 className="banner-slide-title">
-                    Fresh & Healthy
-                    <br />
-                    Organic Food
-                  </h1>
-                  <p className="banner-slide-subtitle">
-                    Sale up to <span className="OFF">30% OFF</span>
-                  </p>
-                  <p className="banner-slide-description">
-                    Free shipping on all your order. we deliver, you enjoy.
-                  </p>
-                  <button className="shop-now" onClick={handleShopNow}>
-                    Shop now &nbsp; <i className="fas fa-arrow-right-long"></i>
-                  </button>
-                </div>
               </div>
             </article>
           ))}
+          <div className="banner-slide-copy">
+            <p className="welcomeP">WELCOME TO SHOPERY</p>
+            <h1 className="banner-slide-title">
+              Fresh & Healthy
+              <br />
+              Organic Food
+            </h1>
+            <p className="banner-slide-subtitle">
+              Sale up to <span className="OFF">30% OFF</span>
+            </p>
+            <p className="banner-slide-description">
+              Free shipping on all your order. we deliver, you enjoy.
+            </p>
+            <div>
+              <button className="shop-now" onClick={handleShopNow}>
+                Shop now &nbsp; <i className="fas fa-arrow-right-long"></i>
+              </button>
+            </div>
+          </div>
         </div>
 
         <button className="carousel-arrow prev" onClick={handlePrevBanner}>

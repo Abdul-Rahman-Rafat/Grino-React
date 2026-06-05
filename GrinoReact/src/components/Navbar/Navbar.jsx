@@ -18,6 +18,10 @@ function Navbar() {
   const itemsCount = useMemo(() => getCartItemsCount(state.cart), [state.cart]);
   const cartTotal = useMemo(() => getCartTotal(state.cart), [state.cart]);
 
+  const openExternal = useCallback((url) => {
+    window.open(url, "_blank");
+  }, []);
+
   const handleToggleCart = useCallback(() => {
     setIsCartOpen((current) => !current);
   }, []);
@@ -143,7 +147,7 @@ function Navbar() {
           </ul>
           <ul
             id="ul-mob"
-            className={`links-list ${isMenuOpen ? "active" : ""}`}
+            className={`links-list ${isMenuOpen ? "show-menu" : ""}`}
           >
             <li>
               <NavLink to="/">Home</NavLink>
@@ -161,7 +165,14 @@ function Navbar() {
               <NavLink to="/contact">Contact Us</NavLink>
             </li>
             <div id="call-mob" className="call-now">
-              <i className="ri-phone-line"></i>
+              <i
+                className="ri-phone-line"
+                onClick={() =>
+                  openExternal(
+                    "https://wa.me/201113545007?text=Hello%20I%20want%20to%20contact%20you",
+                  )
+                }
+              ></i>
               <div>
                 <p>Call Now</p>
                 <h3>(+20) 111-3545-007</h3>
@@ -192,7 +203,14 @@ function Navbar() {
             onClick={handleToggleMenu}
           ></i>
           <div className="call-now">
-            <i className="ri-phone-line"></i>
+            <i
+              className="ri-phone-line"
+              onClick={() =>
+                openExternal(
+                  "https://wa.me/201113545007?text=Hello%20I%20want%20to%20contact%20you",
+                )
+              }
+            ></i>
             <div>
               <p>Call Now</p>
               <h3>(+20) 111-3545-007</h3>

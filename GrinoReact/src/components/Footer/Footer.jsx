@@ -35,9 +35,28 @@ function Footer() {
             your doorstep. Eat clean, live healthy.
           </p>
           <div className="social-media">
-            <i className="ri-facebook-fill" onClick={() => openExternal("https://www.facebook.com/abdelrahmanrafat477/")}></i>
-            <i className="ri-linkedin-fill" onClick={() => openExternal("https://www.linkedin.com/in/abdul-rahman-rafat-b571a4361/")}></i>
-            <i className="ri-whatsapp-fill" onClick={() => openExternal("https://wa.me/201011223344?text=Hello%20I%20want%20to%20contact%20you")}></i>
+            <i
+              className="ri-facebook-fill"
+              onClick={() =>
+                openExternal("https://www.facebook.com/abdelrahmanrafat477/")
+              }
+            ></i>
+            <i
+              className="ri-linkedin-fill"
+              onClick={() =>
+                openExternal(
+                  "https://www.linkedin.com/in/abdul-rahman-rafat-b571a4361/",
+                )
+              }
+            ></i>
+            <i
+              className="ri-whatsapp-fill"
+              onClick={() =>
+                openExternal(
+                  "https://wa.me/201113545007?text=Hello%20I%20want%20to%20contact%20you",
+                )
+              }
+            ></i>
             <i className="ri-twitter-x-line"></i>
             <i className="ri-instagram-line"></i>
           </div>
@@ -56,7 +75,15 @@ function Footer() {
           <h2 className="links-title">Helps</h2>
           <hr />
           <ul className="footer-links">
-            <li onClick={() => openExternal("https://wa.me/201011223344?text=Hello%20I%20want%20to%20contact%20you")}>Contact</li>
+            <li
+              onClick={() =>
+                openExternal(
+                  "https://wa.me/201113545007?text=Hello%20I%20want%20to%20contact%20you",
+                )
+              }
+            >
+              Contact
+            </li>
             <li>Faqs</li>
             <li>Terms & Condition</li>
             <li>Privacy Policy</li>
@@ -96,7 +123,8 @@ function Footer() {
       <div className="copyright-container">
         <div className="copyright">
           <p className="copyright-txt">
-            (c) Grino eCommerce 2025 - Built by Abdul Rahman Rafat All Rights Reserved
+            (c) Grino eCommerce 2025 - Built by Abdul Rahman Rafat All Rights
+            Reserved
           </p>
           <p className="front-developer">coded by Abdulrahman-R</p>
           <div className="payment-methods">

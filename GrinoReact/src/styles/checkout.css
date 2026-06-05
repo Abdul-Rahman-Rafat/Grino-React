@@ -186,6 +186,9 @@
 .success_order.showMsg {
   width: 40rem;
   height: 30vh;
+  min-width: 20rem;
+  min-height: 30vh;
+
   opacity: 100;
 }
 
@@ -245,5 +248,20 @@
   }
   #streetAddress {
     width: 100%;
+  }
+  .success_order.showMsg {
+    top: 50%;
+    left: 50%;
+    right: unset;
+    transform: translate(-50%, -50%);
+    width: 85vw;
+    height: auto;
+    min-height: unset;
+    padding: 20px;
+  }
+
+  .success_order p {
+    font-size: var(--Heading-4);
+    text-align: center;
   }
 }

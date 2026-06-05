@@ -392,14 +392,18 @@
 
 .carousel-banner .carousel-track {
   position: relative;
+  padding: var(--Padding-3) var(--Padding-3);
   height: 80vh;
   background: url(/images/caroback.png) center/cover no-repeat;
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-end;
 }
 .banner-slide-content {
   display: flex;
   /* gap: 30px; */
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .banner-slide-content img {
@@ -442,18 +446,13 @@
 }
 
 .banner-slide-copy {
-  /* flex: 1 1 40%; */
   padding: 48px;
-  /* background: rgba(255, 255, 255, 0.92);
-  border-radius: 24px;
-  box-shadow: var(--Gray-8) 0 0 20px 0; */
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-items: flex-end;
+
   gap: 24px;
-  /* position: absolute;
-  right: 10%;
-  top: 15%; */
 }
 .banner-slide-copy .shop-now {
   background: var(--Primary);
@@ -2186,6 +2185,89 @@
 }
 
 @media (max-width: 768px) {
+  .banner-slide-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+  /* 1. الـ track يبقى auto مش fixed height */
+  .carousel-banner .carousel-track {
+    height: auto;
+    background-size: cover;
+    padding: 0;
+  }
+
+  /* 2. كل الـ slides تبقى مخفية بالـ display */
+  .banner-slide {
+    position: relative !important;
+    inset: unset !important;
+    display: none; /* مش opacity — عشان متاخدش مساحة */
+    flex-direction: column-reverse;
+    gap: 0;
+    padding: 20px 16px;
+    height: 295px !important;
+  }
+
+  /* 3. بس الـ active تظهر */
+  .banner-slide.active {
+    display: flex !important;
+    opacity: 1;
+    transform: none;
+  }
+
+  /* 4. الصورة */
+  .banner-slide-content img {
+    width: 100%;
+    max-height: 260px;
+    object-fit: contain;
+  }
+
+  /* 5. النص */
+  .banner-slide-copy {
+    padding: 16px 8px;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .banner-slide-title {
+    font-size: var(--Heading-1);
+    line-height: 1.2;
+  }
+
+  /* 6. الـ dots تبقى في مكانها */
+  .carousel-dots {
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    left: unset;
+    transform: none;
+  }
+
+  /* الـ track يبقى relative عشان الـ arrows تتحسب منه */
+  .carousel-banner .carousel-track {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* الـ arrows تبقى fixed في منتصف الـ track مش الـ slide */
+  .carousel-arrow.prev,
+  .carousel-arrow.next {
+    position: absolute;
+    top: 60%; /* منتصف تقريبي ثابت */
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .carousel-arrow.prev {
+    left: 8px;
+  }
+
+  .carousel-arrow.next {
+    right: 8px;
+  }
+
   /* navigation */
   .small-one {
     gap: 10px;
@@ -2240,6 +2322,7 @@
 
   #icons-mob {
     display: flex;
+    margin-top: 25px;
   }
   .call-now {
     display: none;
