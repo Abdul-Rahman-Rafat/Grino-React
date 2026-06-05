@@ -1,5 +1,6 @@
 import { memo, useCallback, useMemo, useState } from "react";
 import ProductCard from "../components/ProductCard/ProductCard";
+import { useNavigate } from "react-router-dom";
 import { useStore } from "../context/store";
 import { useTimer } from "../hooks/useTimer";
 import { getDiscountedPrice } from "../utils/priceUtils";
@@ -50,6 +51,7 @@ function ProductsPage() {
   const { state, dispatch } = useStore();
   const timer = useTimer();
   const [sortBy, setSortBy] = useState("latest-products");
+  const navigate = useNavigate();
 
   const filteredProducts = useMemo(() => {
     const filtered = state.products.filter((product) => {
@@ -129,6 +131,10 @@ function ProductsPage() {
     "--left": `${(state.priceRange.min / 30) * 100}%`,
     "--right": `${100 - (state.priceRange.max / 30) * 100}%`,
   };
+
+  const handleShopNow = useCallback(() => {
+    navigate("/products");
+  }, [navigate]);
 
   return (
     <>
@@ -249,6 +255,19 @@ function ProductsPage() {
                   </label>
                 </div>
               ))}
+            </div>
+
+            <div className="banner-products">
+              <p className="discount-offer">
+                <span className="up-to-value-products">79% OFF</span> Discount
+              </p>
+              <h3 className="firstorder">on your first order</h3>
+
+              <div>
+                <button className="shop-now-banner" onClick={handleShopNow}>
+                  Shop Now &nbsp; <i className="fas fa-arrow-right-long"></i>
+                </button>
+              </div>
             </div>
           </div>
         </aside>
