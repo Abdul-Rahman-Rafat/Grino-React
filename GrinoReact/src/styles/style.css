@@ -393,7 +393,7 @@
 .carousel-banner .carousel-track {
   position: relative;
   height: 80vh;
-  background: url(../../public/images/caroback.png) center/cover no-repeat;
+  background: url(/images/caroback.png) center/cover no-repeat;
 }
 .banner-slide-content {
   display: flex;
@@ -698,7 +698,7 @@
   flex-wrap: wrap;
   width: 80%;
   margin: auto;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   justify-content: space-evenly;
   align-items: center;
 }
@@ -722,8 +722,11 @@
 }
 
 .features-container i {
-  font-size: calc(var(--Heading-1) + 20px);
+  font-size: calc(var(--Heading-1));
   color: var(--Primary);
+  background: url(images/back\ of\ i.webp);
+  background-size: cover;
+  padding: var(--Padding-6);
 }
 .feature-txt {
   line-height: 30px;
@@ -731,6 +734,7 @@
 .feature-txt p {
   color: var(--Gray-5);
 }
+
 /* end of features */
 
 .popular-categories {

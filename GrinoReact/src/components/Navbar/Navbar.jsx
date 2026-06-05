@@ -132,7 +132,7 @@ function Navbar() {
               <NavLink to="/products">Shop</NavLink>
             </li>
             <li>
-              <a href="#blog">Blog</a>
+              <NavLink to="/blog">Blog</NavLink>
             </li>
             <li>
               <NavLink to="/about">About Us</NavLink>
