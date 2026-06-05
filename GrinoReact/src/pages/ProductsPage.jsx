@@ -3,6 +3,7 @@ import ProductCard from "../components/ProductCard/ProductCard";
 import { useStore } from "../context/store";
 import { useTimer } from "../hooks/useTimer";
 import { getDiscountedPrice } from "../utils/priceUtils";
+import SearchBar from "../components/Navbar/SearchBar";
 
 const categoryGroups = [
   [["all", "all-Categories-btn", "All Categories"]],
@@ -253,6 +254,7 @@ function ProductsPage() {
         </aside>
 
         <div className="sort-products-container">
+          <SearchBar />
           <div className="title-sort">
             <div className="sort">
               <h4 className="sort-by-title">Sort by </h4>
@@ -267,7 +269,7 @@ function ProductsPage() {
               </select>
             </div>
             <p className="sort-by-result">
-              <span>{filteredProducts.length}</span> results found
+              <span>{filteredProducts.length}</span> Products
             </p>
           </div>
           <div id="products" className="products">

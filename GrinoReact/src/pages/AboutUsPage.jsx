@@ -45,7 +45,7 @@ function AboutUsPage() {
             <h3 className="ourStory">Our story</h3>
             <h1 className="Trusted-txt">100% Trusted Organic Food Store</h1>
             <p className="paragraph">
-              At Grino, our mission is to deliver the best of nature directly
+              At Nutra, our mission is to deliver the best of nature directly
               from the farm to your table. We believe that healthy food is the
               foundation of a happy life. Therefore, we work passionately with
               local farmers who are strictly committed to organic standards,

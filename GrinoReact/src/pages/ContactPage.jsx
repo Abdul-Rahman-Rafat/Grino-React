@@ -45,7 +45,7 @@ function ContactPage() {
               <i className="ri-mail-line"></i>
               <div>
                 <h3>Email Us</h3>
-                <p>info@grino.com</p>
+                <p>Nutra@Nutra.com</p>
               </div>
             </div>
             <div className="contact-detail-box">
@@ -58,11 +58,6 @@ function ContactPage() {
           </div>
 
           <div className="contact-form-card">
-            <h2>Just Say Hello!</h2>
-            <p>
-              Do you fancy saying hi to me or you want to get started with your
-              project and you need my help? Feel free to contact me.
-            </p>
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="contact-row">
                 <input
@@ -108,7 +103,7 @@ function ContactPage() {
 
       <section className="contact-map-section">
         <iframe
-          title="Grino Location"
+          title="Nutra Location"
           src="https://maps.google.com/maps?q=11%20New%20ST.%20Shobra%2C%20Cairo%2C%20Egypt&t=&z=13&ie=UTF8&iwloc=&output=embed"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

@@ -26,8 +26,14 @@ function Footer() {
       <div className="footer">
         <div className="company">
           <div className="logo-container">
-            <i className="fas fa-solid fa-seedling"></i>
-            <h1>Grino</h1>
+            {/* <i className="fas fa-solid fa-seedling"></i>
+            <h1>Grino</h1> */}
+            <img
+              className="logo-nutra"
+              src="/images/nutra1.png"
+              alt="Nutra Logo"
+              style={{ borderRadius: "10% 10% 75% 75%" }}
+            />
           </div>
           <p className="footer-summery">
             Your Trusted Store for Fresh & Organic Food We provide high-quality

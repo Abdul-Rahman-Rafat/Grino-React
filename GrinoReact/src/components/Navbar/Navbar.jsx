@@ -106,28 +106,21 @@ function Navbar() {
 
         <div className="middle">
           <Link className="Logo" to="/">
-            <i className="fas fa-solid fa-seedling"></i>
-            <i className="ri-seedling-fill"></i>
-            <h1>Grino</h1>
+            {/* <i className="fas fa-solid fa-seedling"></i>
+            <i className="ri-seedling-fill"></i> */}
+            <img
+              className="logo-nutra"
+              src="/images/nutra1.png"
+              alt="Grino Logo"
+            />
+            {/* <h1>Grino</h1> */}
           </Link>
-          <SearchBar />
-          <div className="icons">
-            <i className="ri-heart-line favs" onClick={handleFavorites}></i>
-            <span className="divider">|</span>
-            <div className="shopping" onClick={handleToggleCart}>
-              <div className="cart">
-                <i className="ri-shopping-cart-line"></i>
-                <span className="items-count">{itemsCount}</span>
-              </div>
-              <div className="info">
-                <p className="shopping-txt">Shopping Cart:</p>
-                <span className="cart-price">{formatPrice(cartTotal)}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="nav-links">
+          {/* <SearchBar /> */}
+          <i
+            id="burger-menu"
+            className="fa-solid fa-bars"
+            onClick={handleToggleMenu}
+          ></i>
           <ul className="links-list">
             <li>
               <NavLink to="/">Home</NavLink>
@@ -145,63 +138,6 @@ function Navbar() {
               <NavLink to="/contact">Contact Us</NavLink>
             </li>
           </ul>
-          <ul
-            id="ul-mob"
-            className={`links-list ${isMenuOpen ? "show-menu" : ""}`}
-          >
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-              <NavLink to="/products">Shop</NavLink>
-            </li>
-            <li>
-              <NavLink to="/blog">Blog</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">About Us</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact Us</NavLink>
-            </li>
-            <div id="call-mob" className="call-now">
-              <i
-                className="ri-phone-line"
-                onClick={() =>
-                  openExternal(
-                    "https://wa.me/201113545007?text=Hello%20I%20want%20to%20contact%20you",
-                  )
-                }
-              ></i>
-              <div>
-                <p>Call Now</p>
-                <h3>(+20) 111-3545-007</h3>
-              </div>
-            </div>
-            <div id="icons-mob" className="icons">
-              <i className="ri-heart-line favs" onClick={handleFavorites}></i>
-              <span className="divider">|</span>
-              <div className="shopping" onClick={handleToggleCart}>
-                <div className="cart">
-                  <i className="ri-shopping-cart-line"></i>
-                  <span className="items-count items-count-mob">
-                    {itemsCount}
-                  </span>
-                </div>
-                <div className="info">
-                  <p className="shopping-txt">Shopping Cart:</p>
-                  <span className="cart-price cart-price-mob">
-                    {formatPrice(cartTotal)}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </ul>
-          <i
-            id="burger-menu"
-            className="fa-solid fa-bars"
-            onClick={handleToggleMenu}
-          ></i>
           <div className="call-now">
             <i
               className="ri-phone-line"
@@ -212,11 +148,82 @@ function Navbar() {
               }
             ></i>
             <div>
-              <p>Call Now</p>
+              {/* <p>Call Now</p> */}
               <h3>(+20) 111-3545-007</h3>
             </div>
           </div>
+
+          <div className="icons">
+            <i className="ri-heart-line favs" onClick={handleFavorites}></i>
+            <span className="divider">|</span>
+            <div className="shopping" onClick={handleToggleCart}>
+              <div className="cart">
+                <i className="ri-shopping-cart-line"></i>
+                <span className="items-count">{itemsCount}</span>
+              </div>
+              <div className="info">
+                <p className="shopping-txt">Shopping Cart:</p>
+                <span className="cart-price">{formatPrice(cartTotal)}</span>
+              </div>
+            </div>
+          </div>
         </div>
+        <ul
+          id="ul-mob"
+          className={`links-list ${isMenuOpen ? "show-menu" : ""}`}
+        >
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/products">Shop</NavLink>
+          </li>
+          <li>
+            <NavLink to="/blog">Blog</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About Us</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact Us</NavLink>
+          </li>
+
+          <div id="call-mob" className="call-now">
+            <i
+              className="ri-phone-line"
+              onClick={() =>
+                openExternal(
+                  "https://wa.me/201113545007?text=Hello%20I%20want%20to%20contact%20you",
+                )
+              }
+            ></i>
+
+            <div>
+              {/* <p>Call Now</p> */}
+              <h3>(+20) 111-3545-007</h3>
+            </div>
+          </div>
+          <div id="icons-mob" className="icons">
+            <i className="ri-heart-line favs" onClick={handleFavorites}></i>
+            <span className="divider">|</span>
+            <div className="shopping" onClick={handleToggleCart}>
+              <div className="cart">
+                <i className="ri-shopping-cart-line"></i>
+                <span className="items-count items-count-mob">
+                  {itemsCount}
+                </span>
+              </div>
+              <div className="info">
+                <p className="shopping-txt">Shopping Cart:</p>
+                <span className="cart-price cart-price-mob">
+                  {formatPrice(cartTotal)}
+                </span>
+              </div>
+            </div>
+          </div>
+        </ul>
+
+        {/* <div className="nav-links"></div> */}
         {routeTrail.length > 0 && (
           <div className="nav-pages">
             <i className="fas fa-regular fa-house" onClick={handleHome}></i>

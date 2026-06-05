@@ -41,7 +41,7 @@ const features = [
 
 const bannerSlides = [
   {
-    image: "images/caro1img.png",
+    image: "images/caro1img2.png",
   },
 
   {
@@ -150,7 +150,7 @@ function HomePage() {
             </article>
           ))}
           <div className="banner-slide-copy">
-            <p className="welcomeP">WELCOME TO SHOPERY</p>
+            <p className="welcomeP">WELCOME TO Nutra</p>
             <h1 className="banner-slide-title">
               Fresh & Healthy
               <br />
