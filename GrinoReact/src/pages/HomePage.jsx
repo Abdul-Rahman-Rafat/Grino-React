@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo } from "react";
+import { memo, useCallback, useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "../components/ProductCard/ProductCard";
 import { useStore } from "../context/store";
@@ -65,6 +65,18 @@ const newsCards = [
   ],
 ];
 
+const bannerSlides = [
+  {
+    image: "images/caro1img.png",
+  },
+  {
+    image: "images/caro2img.png",
+  },
+  {
+    image: "images/caro3img.png",
+  },
+];
+
 const testimonials = [
   [
     "images/customer1.webp",
@@ -125,48 +137,79 @@ function HomePage() {
     [navigate],
   );
 
+  const [activeBanner, setActiveBanner] = useState(0);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveBanner((current) => (current + 1) % bannerSlides.length);
+    }, 6000);
+    return () => window.clearInterval(intervalId);
+  }, []);
+
+  const handlePrevBanner = useCallback(() => {
+    setActiveBanner(
+      (current) => (current - 1 + bannerSlides.length) % bannerSlides.length,
+    );
+  }, []);
+
+  const handleNextBanner = useCallback(() => {
+    setActiveBanner((current) => (current + 1) % bannerSlides.length);
+  }, []);
+
   const handleTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (
     <>
-      <section id="home" className="banner">
-        <div className="big-banner">
-          <div className="title">
-            <h1>Fresh & Healthy</h1>
-            <h1 className="">Organic Food</h1>
-          </div>
-          <div className="discount">
-            <p>
-              Sale up to <span className="discount-percent">30% OFF</span>
-            </p>
-            <p className="free-ship">Free shipping on all your order.</p>
-          </div>
-          <div>
-            <button className="shop-now" onClick={handleShopNow}>
-              Shop Now &nbsp; <i className="fas fa-arrow-right-long"></i>
-            </button>
-          </div>
+      <section id="home" className="banner carousel-banner">
+        <div className="carousel-track">
+          {bannerSlides.map((slide, index) => (
+            <article
+              key={slide.image}
+              className={`banner-slide ${index === activeBanner ? "active" : ""}`}
+            >
+              <div className="banner-slide-content">
+                <img src={slide.image} alt={`Slide ${index + 1}`} />
+
+                <div className="banner-slide-copy">
+                  <p className="welcomeP">WELCOME TO SHOPERY</p>
+                  <h1 className="banner-slide-title">
+                    Fresh & Healthy
+                    <br />
+                    Organic Food
+                  </h1>
+                  <p className="banner-slide-subtitle">
+                    Sale up to <span className="OFF">30% OFF</span>
+                  </p>
+                  <p className="banner-slide-description">
+                    Free shipping on all your order. we deliver, you enjoy.
+                  </p>
+                  <button className="shop-now" onClick={handleShopNow}>
+                    Shop now &nbsp; <i className="fas fa-arrow-right-long"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
-        <div className="small-banner">
-          <div className="up-banner Smallbanner">
-            <p className="sale">WINTER SALE</p>
-            <h1>75% OFF</h1>
-            <p className="only">Only Fruit & Vegetable</p>
-            <button className="shop-now" onClick={handleShopNow}>
-              Shop Now &nbsp; <i className="fas fa-arrow-right-long"></i>
-            </button>
-          </div>
-          <div className="low-banner Smallbanner">
-            <p>BEST DEAL</p>
-            <h1 className="p-of-low-banner">
-              Special Products <br /> Deal of the Month
-            </h1>
-            <button className="shop-now" onClick={handleShopNow}>
-              Shop Now &nbsp; <i className="fas fa-arrow-right-long"></i>
-            </button>
-          </div>
+
+        <button className="carousel-arrow prev" onClick={handlePrevBanner}>
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button className="carousel-arrow next" onClick={handleNextBanner}>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <div className="carousel-dots">
+          {bannerSlides.map((_, index) => (
+            <button
+              key={index}
+              className={`carousel-dot ${index === activeBanner ? "active" : ""}`}
+              onClick={() => setActiveBanner(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </section>
 
