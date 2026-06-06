@@ -8,9 +8,9 @@
 
 :root {
   /* main-colors */
-  --Soft-Primary: #84d187;
-  --Primary: #00b207;
-  --Hard-Primary: #2c742f;
+  --Soft-Primary: #f7a447;
+  --Primary: #ff8a00;
+  --Hard-Primary: #ca710b;
   --Warning: #ff8a00;
   --Danger: #ea4b48;
   --White: #ffffff;
@@ -1016,7 +1016,7 @@
   transition: all 0.3s ease-in-out;
 }
 .fav-eye i:hover {
-  color: var(--Green-Gray-2);
+  color: var(--Soft-Primary);
 }
 
 .product-card:hover .fav-eye {
