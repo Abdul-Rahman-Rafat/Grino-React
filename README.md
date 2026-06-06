@@ -15,8 +15,8 @@ An e-commerce web app for organic food products, built with React. No UI library
 
 ## Screenshots
 
-![Desktop](./screenshots/Desktop.webp)
-![Mobile](./screenshots/mobile.webp)
+![Desktop](./Nutra/screenshots/Desktop.webp)
+![Mobile](./Nutra/screenshots/mobile.webp)
 
 ---
 
