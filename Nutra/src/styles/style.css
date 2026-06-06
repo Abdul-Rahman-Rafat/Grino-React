@@ -551,10 +551,12 @@
 .carousel-arrow.prev {
   left: 90px;
   top: 50%;
+  z-index: 21;
 }
 .carousel-arrow.next {
   right: 90px;
   top: 50%;
+  z-index: 21;
 }
 
 .carousel-dots {
