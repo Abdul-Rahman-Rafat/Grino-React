@@ -209,15 +209,6 @@ Returns 30 grocery products with title, price, discountPercentage, rating, stock
 
 ---
 
-## Roadmap
-
-- [ ] TypeScript migration
-- [ ] Add search results page
-- [ ] Real backend with order history
-- [ ] Dark mode toggle
-- [ ] Unit tests with Vitest
-
----
 
 ## Author
 
@@ -227,8 +218,3 @@ Frontend Developer — ITI Graduate (160+ hours)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?logo=linkedin)](https://www.linkedin.com/in/abdul-rahman-rafat-b571a4361/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?logo=github)](https://github.com/your-username)
 
----
-
-## License
-
-MIT
