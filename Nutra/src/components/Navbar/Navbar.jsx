@@ -110,7 +110,7 @@ function Navbar() {
             <i className="ri-seedling-fill"></i> */}
             <img
               className="logo-nutra"
-              src="/images/nutra1.png"
+              src="/images/nutra1.webp"
               alt="Grino Logo"
             />
             {/* <h1>Grino</h1> */}

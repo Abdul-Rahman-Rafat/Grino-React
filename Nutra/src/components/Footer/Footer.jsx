@@ -30,7 +30,7 @@ function Footer() {
             <h1>Grino</h1> */}
             <img
               className="logo-nutra"
-              src="/images/nutra1.png"
+              src="/images/nutra1.webp"
               alt="Nutra Logo"
               style={{ borderRadius: "10% 10% 75% 75%" }}
             />

@@ -41,14 +41,14 @@ const features = [
 
 const bannerSlides = [
   {
-    image: "images/caro1img2.png",
+    image: "images/caro1img2.webp",
   },
 
   {
-    image: "images/caro2img.png",
+    image: "images/caro2img.webp",
   },
   {
-    image: "images/caro3img.png",
+    image: "images/caro3img.webp",
   },
 ];
 

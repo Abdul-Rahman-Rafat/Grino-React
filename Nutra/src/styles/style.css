@@ -405,7 +405,7 @@
   position: relative;
   padding: var(--Padding-3) var(--Padding-3);
   height: 82vh;
-  background: url(/images/caroback.png) center/cover no-repeat;
+  background: url(/images/caroback.webp) center/cover no-repeat;
   display: flex;
   /* align-items: center; */
   justify-content: flex-end;
