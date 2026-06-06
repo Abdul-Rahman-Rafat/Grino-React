@@ -121,6 +121,21 @@ function HomePage() {
     return () => window.clearInterval(intervalId);
   }, []);
 
+  useEffect(() => {
+    const arrow = document.querySelector(".up-home-arrow");
+
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        arrow.style.display = "flex";
+      } else {
+        arrow.style.display = "none";
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handlePrevBanner = useCallback(() => {
     setActiveBanner(
       (current) => (current - 1 + bannerSlides.length) % bannerSlides.length,

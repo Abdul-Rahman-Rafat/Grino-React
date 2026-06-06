@@ -32,7 +32,10 @@ function SubscribePopup() {
 
   return (
     <>
-      <div className={`popup-overlay ${isOpen ? "active" : ""}`} onClick={handleClose}></div>
+      <div
+        className={`popup-overlay ${isOpen ? "active" : ""}`}
+        onClick={handleClose}
+      ></div>
       <section className={`pop-subscribe ${isOpen ? "active" : ""}`}>
         <img className="image-pop" src="images/pop-man.webp" alt="pop" />
         <div className="pop-subscribe-txt">
@@ -43,13 +46,19 @@ function SubscribePopup() {
           <div className="sub">
             <p>
               Subscribe to our newlletter and Save your
-              <span className="pop-offer-value">20% </span>
+              <span className="pop-offer-value"> 20% </span>
             </p>
             <br />
-            <p><span> money</span> with discount code today.</p>
+            <p>
+              <span> money</span> with discount code today.
+            </p>
           </div>
           <div className="email-address-container pop-email-container">
-            <form name="submit-to-google-sheet" onSubmit={handleSubmit}>
+            <form
+              className="submit-to-google-sheet"
+              name="submit-to-google-sheet"
+              onSubmit={handleSubmit}
+            >
               <input
                 name="Email"
                 className="email-field"
@@ -57,12 +66,18 @@ function SubscribePopup() {
                 type="email"
                 placeholder="Your email address"
               />
-              <button className="subscribe-btn" type="submit">Subscribe</button>
+              <button className="subscribe-btn" type="submit">
+                Subscribe
+              </button>
             </form>
           </div>
           <div className="check-box-container">
             <i
-              className={hideAgain ? "ri-checkbox-fill check-box" : "ri-checkbox-blank-line check-box"}
+              className={
+                hideAgain
+                  ? "ri-checkbox-fill check-box"
+                  : "ri-checkbox-blank-line check-box"
+              }
               onClick={handleCheckbox}
             ></i>
             Do not show this window

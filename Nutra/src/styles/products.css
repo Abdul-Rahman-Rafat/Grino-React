@@ -291,9 +291,11 @@
   letter-spacing: 2px;
   /* line-height: 50px; */
   gap: 20px;
-  padding-bottom: var(--Padding-3);
-  background: url("images/BannarProducts2.webp");
+
+  padding: var(--Padding-5) 0 var(--Padding-3) 0;
+  background: url("images/right-banner.webp");
   background-size: cover;
+  background-position: center;
   /* width: 470px; */
   /* height: 536px; */
   border-radius: 8px;
@@ -307,7 +309,7 @@
   font-weight: var(--Weight-6);
 }
 .up-to-value-products {
-  color: var(--Primary);
+  color: var(--White);
   font-size: var(--Heading-2);
 }
 .firstorder,

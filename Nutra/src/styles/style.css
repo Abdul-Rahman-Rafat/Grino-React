@@ -492,9 +492,10 @@
 } */
 .welcomeP {
   color: var(--Primary);
+  font-weight: var(--Weight-7);
 }
 .banner-slide-title {
-  font-size: calc(var(--Heading-1) + 40px);
+  font-size: calc(var(--Heading-1) + 50px);
   color: var(--Gray-9);
   line-height: 1.05;
 }
@@ -548,11 +549,11 @@
   transform: scale(1.05);
 }
 .carousel-arrow.prev {
-  left: 24px;
+  left: 90px;
   top: 50%;
 }
 .carousel-arrow.next {
-  right: 24px;
+  right: 90px;
   top: 50%;
 }
 
@@ -1911,7 +1912,7 @@
   /* flex: 1; */
   height: 380px;
   object-fit: fill;
-  content: url("images/pop-man.webp");
+  content: url("images/veg-bag.webp");
 }
 
 .pop-subscribe-txt {
@@ -1944,6 +1945,11 @@
   flex-wrap: wrap;
   gap: 10px;
   /* align-items: center; */
+}
+.submit-to-google-sheet {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .pop-email-container .email-field {
@@ -2516,7 +2522,7 @@
     width: 330px;
     height: 300px;
     flex: 1;
-    content: url("images/pop-man2.webp");
+    content: url("images/why-choose-.webp");
   }
 
   .pop-email-container {
